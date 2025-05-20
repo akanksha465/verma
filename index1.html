@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akanksha Verma - Portfolio</title>
+  <style>
+    :root {
+      --primary: #1a237e;
+      --secondary: #f8bbd0;
+      --text-dark: #212121;
+      --text-light: #ffffff;
+      --card-bg: #ffffffee;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f8bbd0, #e1f5fe);
+      margin: 0;
+      padding: 0;
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: var(--text-light);
+      padding: 30px 20px 40px;
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 20px auto;
+      display: block;
+    }
+
+    .search-bar {
+      margin: 20px auto;
+      max-width: 300px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-bar input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 300px;
+      font-size: 1rem;
+    }
+
+    .menu-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .menu-buttons button {
+      background-color: #3949ab;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .menu-buttons button:hover {
+      background-color: #5c6bc0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 15px;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #3949ab;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      background-color: var(--card-bg);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    video {
+      display: block;
+      margin: 15px auto;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #1a237e;
+      color: var(--text-light);
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 40px;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #ffccbc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-photo {
+        width: 100px;
+        height: 100px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .menu-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <!-- Replace with a valid image path or URL -->
+    <img src="C:\Users\Dell\Downloads\profile.jpg" alt="Akanksha Verma" class="profile-photo" />
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." />
+    </div>
+
+    <div class="menu-buttons">
+      <button onclick="location.href='#welcome'">Home</button>
+      <button onclick="location.href='#achievements'">Projects</button>
+      <button onclick="location.href='#personal'">Contact</button>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#personal">Personal Side</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="welcome">
+      <h2>Hello, I'm Akanksha</h2>
+      <video controls>
+        <source src="introduction.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p><strong>Name:</strong> Akanksha Verma</p>
+      <p><strong>Location:</strong> Palghar</p>
+      <p><strong>Education:</strong> BTech in Electronic and Computer Science</p>
+      <p><strong>Languages:</strong> English, Hindi</p>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Computer Networking</li>
+        <li>Cyber Security</li>
+        <li>VLSI</li>
+      </ul>
+    </section>
+
+    <section id="goals">
+      <h2>Future Goals</h2>
+      <p>To become a successful and innovative Software Engineer.</p>
+    </section>
+
+    <section id="personal">
+      <h2>Personal Side</h2>
+      <p><strong>Hobbies:</strong> Coding, Gardening, Cooking</p>
+      <p><strong>Favorite Role Model:</strong> Vicky Kaushal</p>
+      <p><strong>Favorite Book:</strong> Big Magic</p>
+      <p><strong>Volunteering Experience:</strong> Land Rover, Cisco Packet Tracer</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2027 Akanksha Verma. All rights reserved.</p>
+    <p>Connect with me on <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+  </footer>
+
+</body>
+</html>
